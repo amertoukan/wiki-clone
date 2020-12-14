@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+<h1 class="display-2 error">{{message}}</h1>
+
+{% if type == "not_found" %}
+<h3>The page {{title}} cannot be found.</h3>
+{% endif %}
+{% if type == "exists" %}
+ <h3>The page {{title}} already exists.</h3>
+{% endif %}
+{% endblock %}
